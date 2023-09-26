@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "abde41ef-61a6-4502-87e1-e0c4a05f8345",
+		"name": "challenge3-idzhar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29806492"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"model\": \"ford\",\r\n    \"image\" :\"image\",\r\n    \"rentPerDay\":\"25000\",\r\n    \"capacity\":\"6\",\r\n    \"availableAt\":\"l5-20003\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listcars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cars by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/cars/e95f38df-c031-4f9e-ab2e-f0f836ee4e39",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cars",
+						"e95f38df-c031-4f9e-ab2e-f0f836ee4e39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete cars",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/cars/6e2bc663-5197-441a-957b-bc75e4a2da7c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cars",
+						"6e2bc663-5197-441a-957b-bc75e4a2da7c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create cars",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"model\": \"FORD\",\r\n    \"image\": \"./images/car100.min.png\",\r\n    \"rentPerDay\": \"100000\",\r\n    \"capacity\": \"2\",\r\n    \"description\": \"ini mobil bagus\",\r\n    \"availableAt\": \"2022-3-23T16:65:66.563Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update cars",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"model\": \"LAMBORGHINI\",\r\n    \"image\": \"./images/car100.min.png\",\r\n    \"rentPerDay\": \"500000\",\r\n    \"capacity\": \"1\",\r\n    \"description\": \"mobil kenceng banget blacklist razor aja kalah\",\r\n    \"availableAt\": \"2022-3-23T16:65:66.563Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/cars/e95f38df-c031-4f9e-ab2e-f0f836ee4e39",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cars",
+						"e95f38df-c031-4f9e-ab2e-f0f836ee4e39"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
